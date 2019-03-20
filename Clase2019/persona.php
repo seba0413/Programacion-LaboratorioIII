@@ -1,17 +1,14 @@
 <?php
-include "humano.php"
+include "humano.php";
 
 class Persona extends Humano{
 
     public $dni;
 
-    function __construct($dni) 
+    function __construct($nombre, $edad, $dni) 
     {
+        parent::__construct($nombre, $edad);
         $this->dni = $dni;
-    }
-
-    public virtual function retornarJson(){
-        return json_encode($this);
     }
 }
 

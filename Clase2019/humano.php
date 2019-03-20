@@ -1,6 +1,6 @@
 <?php
 
-abstract class Humano{
+class Humano{
 
     public $nombre;
     public $edad;
@@ -10,8 +10,10 @@ abstract class Humano{
         $this->nombre = $nombre;
         $this->edad = $edad;
     }
-
-    public abstract function retornarJson(){}
+    
+    public function retornarJson(){
+        return json_encode($this);
+    }
 }
 
 ?>
