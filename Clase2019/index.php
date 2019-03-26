@@ -1,10 +1,11 @@
 <?php
-    require_once "alumno.php";
+
+    require "crearAlumno.php";
     echo " <br> <h1> Hola </h1>";
 
     $nombre = "Sebastian";
 
-    var_dump($nombre);
+    // var_dump($nombre);
 
     $array = array(
         "nombre" => "Jose",
@@ -15,7 +16,7 @@
     $miArray["nombre"] = "Sebastian";
     $miArray["edad"] = 31;
 
-    var_dump($array);
+    // var_dump($array);
 
     $miObj = new stdClass();
     $miObj->nombre = "Sebastian";

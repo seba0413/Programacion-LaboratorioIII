@@ -14,7 +14,10 @@
 
     $alumno = new Alumno($nombre, $edad, $dni, $legajo);
 
-    var_dump($alumno->retornarJson());
+    //var_dump($alumno->retornarJson());
 
+    //$alumno->guardarAlumno("datosAlumnos.txt");
+
+    $alumno->guardarAlumnoJSON("datosAlumnos.json");
 
 ?>
