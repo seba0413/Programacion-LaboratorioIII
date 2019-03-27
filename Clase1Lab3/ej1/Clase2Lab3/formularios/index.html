@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<!-- Shortcut para plantilla html = !+TAB.  p>lorem*10 = 10 span de lorem ipsum. developer.mozilla.org.  option*4 para opciones dentro del select. Con una linea seleccionada + TAB, la arrastro-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Formularios</h1>
+
+    <form id= "frm1" action="pagina1.php" method="GET">
+
+        <!-- <label for="txtNombre"> Nombre: </label>
+        <input type="text" id="txtNombre" name="" class=""> -->
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <p><label>Nombre: <input type="text" id="txtNombre" name="nombre" placeholder="Ingrese su nombre"></label></p>
+            <p><label>Clave: <input type="password" id="txtClave" name="password"></label></p>
+
+        </fieldset>
+        <p><label>Email: <input type="email" id="txtEmail" name="email"></label></p>
+        <p><label>Edad: <input type="number" id="txtEdad" name="edad" min="1" max="10" value="5"></label></p>
+        <p><label>Foto: <input type="file" id="txtFoto" name="foto" accept="image/*"></label></p>
+        <p><label>Fecha: <input type="date" id="txtFecha" name="fecha" ></label></p>
+        <select name="" id="">
+            <optgroup label="lenguajes 1">                
+                <option value="0">C#</option>
+                <option value="1">Visual Basic</option>
+            </optgroup>
+            <optgroup label="lenguajes 2">
+                <option value="2">Java Script</option>
+                <option value="3">Java</option>               
+            </optgroup>
+        </select> <br/><br/>
+
+        <label>Nada: <input type="checkbox" name="" id="" checked> </label><br/>
+        <label>Bicicleta: <input type="checkbox" name="" id=""> </label><br/>
+        <label>Patina: <input type="checkbox" name="" id=""> </label><br/>
+        <br/>
+
+        <fieldset>
+            <legend>Sexo</legend>
+            <label>Masculino <input type="radio" name="sexo" id="" value="M"> </label><br/>
+            <label>Femenino <input type="radio" name="sexo" id="" value="F"> </label><br/>
+         </fieldset><br/>
+
+         <label for="comentarios">Comentarios</label><br>
+         <textarea name="comentarios" id="" cols="30" rows="10"></textarea><br/>
+
+         <p>E = m, c<sup>2</sup></p>
+
+         <p>H <sub>2</sub>O</p>
+
+         <p> <u>Esto esta subrayado</u></p>
+
+         <p> <mark>Esto esta resaltado</mark></p>
+
+         <p><del>Esto esta tachado</del></p>
+         
+         <h2>Lab III UTN-FRA todos los derechos reservados &copy;</h2>
+
+        <input type="button" value="Un boton">
+        <input type="submit" value="Enviar"> 
+        <input type="reset">
+
+        <script>
+        var txtNombre = document.getElementById('txtNombre'); //Devuelve una referencia a la caja de texto, no al valor
+        
+        // var frm = document.getElementsByTagName('form')[0];   
+        var frm = document.getElementById('frm1');
+        frm.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            alert("Maneje el evento");  
+
+        });   
+
+        </script>
+    </form>
+
+</body>
+</html>
