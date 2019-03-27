@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!-- Shortcut para plantilla html = !+TAB.  p>lorem*10 = 10 span de lorem ipsum. developer.mozilla.org-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Formularios</h1>
+
+    <form id= "frm1" action="pagina1.php" method="GET">
+
+        <!-- <label for="txtNombre"> Nombre: </label>
+        <input type="text" id="txtNombre" name="" class=""> -->
+
+        <p><label>Nombre: <input type="text" id="txtNombre" name="nombre"></label></p>
+        <p><label>Clave: <input type="password" id="txtClave" name="password"></label></p>
+
+        <input type="button" value="Un boton">
+        <input type="submit" value="Enviar"> 
+        <input type="reset">
+
+        <script>
+        var txtNombre = document.getElementById('txtNombre'); //Devuelve una referencia a la caja de texto, no al valor
+        
+        // var frm = document.getElementsByTagName('form')[0];   
+        var frm = document.getElementById('frm1');
+        frm.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            alert("Maneje el evento");  
+            
+        });
+
+   
+
+        </script>
+
+    </form>
+
+</body>
+</html>
