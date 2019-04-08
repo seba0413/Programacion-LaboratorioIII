@@ -153,11 +153,15 @@ class Alumno extends Persona{
         $fecha = date("d") . "-" . date("m") . "-" . date("Y");
         //Guardo la ruta del servidor donde voy a backupear las fotos viejas
         $rutaBackup = "../fotosBackup/{$this->legajo}{$this->nombre}{$fecha}.{$extension[$index]}";
+
+        $estampa = "../fotos/estampa.png";
         
         if(!$this->backupFoto($ruta, $rutafoto, $rutaBackup))
         {
-            move_uploaded_file($ruta, $rutafoto);
+            move_uploaded_file($ruta, $rutafoto);            
         }  
+
+        $this->insertarEstampa($rutafoto, $estampa);        
     }
 
     function backupFoto($rutaTemporal, $rutaOriginal, $rutaDestino)
@@ -170,6 +174,24 @@ class Alumno extends Persona{
         }
 
         return false;  
+    }
+
+    function insertarEstampa($urlimagen, $urlestampa)
+    {
+        // Cargar la estampa y la foto para aplicarle la marca de agua
+        $estampa = imagecreatefrompng($urlestampa);
+        $im = imagecreatefromjpeg($urlimagen);
+        // Establecer los márgenes para la estampa y obtener el alto/ancho de la imagen de la estampa
+        $margen_dcho = 10;
+        $margen_inf = 10;
+        $sx = imagesx($estampa);
+        $sy = imagesy($estampa);
+        // Copiar la imagen de la estampa sobre nuestra foto usando los índices de márgen y el
+        // ancho de la foto para calcular la posición de la estampa. 
+        imagecopy($im, $estampa, imagesx($im) - $sx - $margen_dcho, imagesy($im) - $sy - $margen_inf, 0, 0, imagesx($estampa), imagesy($estampa));
+        // Imprimir y liberar memoria
+        imagejpeg($im, $urlimagen);
+        imagedestroy($im);
     }
 }
 ?>
