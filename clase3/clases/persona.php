@@ -1,15 +1,16 @@
 <?php
-include "humano.php";
+    include "humano.php";
 
-class Persona extends Humano{
-
-    public $dni;
-
-    function __construct($nombre, $edad, $dni) 
+    class Persona extends Humano
     {
-        parent::__construct($nombre, $edad);
-        $this->dni = $dni;
+
+        public $dni;
+
+        function __construct($nombre, $edad, $dni) 
+        {
+            parent::__construct($nombre, $edad);
+            $this->dni = $dni;
+        }
     }
-}
 
 ?>

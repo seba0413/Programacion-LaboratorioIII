@@ -1,13 +1,13 @@
 <?php
-require_once "../clases/Alumno.php";
+    require_once "./clases/Alumno.php";
 
-$nombre = $_POST['nombre'];
-$edad = $_POST['edad'];
-$dni = $_POST['dni'];
-$legajo = $_POST['legajo'];
+    $nombre = $_PUT['nombre'];
+    $edad = $_PUT['edad'];
+    $dni = $_PUT['dni'];
+    $legajo = $_PUT['legajo'];
 
-$alumno = new Alumno($nombre, $edad, $dni, $legajo);
+    $alumno = new Alumno($nombre, $edad, $dni, $legajo);
 
-$alumno->modificarAlumno("../archivos/alumnos.json");
+    $alumno->modificarAlumno("./archivos/alumnos.json");
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-    include "../clases/alumno.php";
+    require_once "./clases/alumno.php";
 
     $nombre = $_POST['nombre'];
     $edad = $_POST['edad'];
@@ -8,7 +8,7 @@
 
     $alumno = new Alumno($nombre, $edad, $dni, $legajo);
 
-    $alumno->guardarAlumnoJSON("../archivos/alumnos.json");
+    $alumno->guardarAlumnoJSON("./archivos/alumnos.json");
 
     // $alumno->guardarAlumno("../archivos/alumnos.txt");
 

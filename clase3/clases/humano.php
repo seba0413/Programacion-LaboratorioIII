@@ -1,7 +1,7 @@
 <?php
 
-class Humano{
-
+class Humano
+{
     public $nombre;
     public $edad;
 

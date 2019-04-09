@@ -1,7 +1,7 @@
 <?php
-    require_once "../clases/alumno.php";
+    require_once "./clases/alumno.php";
 
-    $alumnos = Alumno::listarAlumnosJSON("../archivos/alumnos.json");
+    $alumnos = Alumno::listarAlumnosJSON("./archivos/alumnos.json");
     Alumno::mostrarDatos($alumnos);
 
     // $alumnos = Alumno::listarAlumnos("../archivos/datosAlumnos.txt");
