@@ -39,7 +39,7 @@ ul li a{
         border-bottom: 4px grey solid;
         position: relative;
         left: -50px;
-        transition: left 0.5s;
+        transition: left 1s ease-in;
     }
 }
 
