@@ -1,0 +1,41 @@
+.CSS
+
+ .SELECTORES
+	Tag
+	Id
+	Clase	
+
+Aplicar estilo por tag
+
+p --> Se pueden aplicar reglas dentro de multiples selectores. Ej: p,div{}
+{  
+  color:blue --> atributo:valor;
+}
+
+Aplicar estilo por Id
+
+#miDiv --> Al atributo Id se lo referencia mediante el numeral
+{
+  color:red;
+}
+
+Apilcar estilo por clases
+
+.miClase --> Se puede asignar a cualquier tag
+{
+  background-color: red;
+}
+
+ESTILO EN CASCADA
+
+Estilos del browser se aplican a todos los elementos del browser
+Luego vienen los estilos externos
+Despues los inline, a nivel elemento. Esto se llama estilo en cascada: Desde lo general a lo particular
+
+DOM
+Es la representacion en memoria que el browser hace al renderizar de la pagina
+
+PADDING
+Es la distancia entre el contenido y el borde. Se llama padding o relleno.
+El borde es especificamente el contorno del elemento
+Por fuera del borde, separando al objeto del resto de los elementos que lo rodean tenemos el margin.                                                                                                                      
