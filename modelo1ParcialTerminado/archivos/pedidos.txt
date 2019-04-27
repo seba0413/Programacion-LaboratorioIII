@@ -1,0 +1,7 @@
+mouse;10;2
+monitor;5;1
+teclado;20;2
+disco;12;2
+pendrive;30;1
+pava electrica;12;3
+tablet;50;3
